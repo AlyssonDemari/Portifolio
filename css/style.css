@@ -133,3 +133,70 @@ figure img{
 .redes img:hover {
     filter: sepia(100%) hue-rotate(-20deg) saturate(100000%);
 }
+
+/* HARD SKILLS */
+
+article{
+    background-color: aqua;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article h1{
+    color: var(--color2);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+article p{
+    color: var(--color2);
+    width: 70%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.hard-skills{
+    background-color: pink;
+    margin: 100px 0px ;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.hard-skills li{
+    padding: 50px;
+    background-color: aquamarine;
+}
+
+/* TESTE */
+.barra {
+    width: 150px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgb(46, 43, 226); /* Cor de fundo da barra */
+}
+
+.barra div {
+    height: 100%;
+    border-radius: 10px;
+    background-color: #0fec7d; /* Cor de preenchimento */
+}
+
+/* .barra2{
+    width: 150px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: blueviolet;
+}
+
+
+.barra2 div{
+    height: 100%;
+    border-radius: 10px;
+    background-color: #ec3b0f;
+
+} */

@@ -160,43 +160,53 @@ article p{
     font-weight: 500;
 }
 
+article h2{
+    color: var(--color2);
+    font-family: var(--fonte-padrao);
+    padding: 80px 0px 20px 0px;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
 .hard-skills{
-    background-color: pink;
-    margin: 100px 0px ;
+    background-color: pink;;
+    display: flex;
+    justify-content: center;
     text-align: center;
-    flex-wrap: wrap;
+}
+
+.hard-skills ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
 }
 
 .hard-skills li{
-    padding: 50px;
     background-color: aquamarine;
+    padding: 50px 80px;
 }
 
 /* TESTE */
+
+li span{
+    font-family: var(--fonte-padrao);
+    color: var(--color1);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
 .barra {
     width: 150px;
     height: 20px;
     border-radius: 10px;
-    background-color: rgb(46, 43, 226); /* Cor de fundo da barra */
+    background-color: var(--color2);
+    margin: 10px;
 }
 
 .barra div {
     height: 100%;
     border-radius: 10px;
-    background-color: #0fec7d; /* Cor de preenchimento */
+    background-color: var(--color1);
 }
-
-/* .barra2{
-    width: 150px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: blueviolet;
-}
-
-
-.barra2 div{
-    height: 100%;
-    border-radius: 10px;
-    background-color: #ec3b0f;
-
-} */

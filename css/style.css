@@ -209,20 +209,14 @@ li span{
     height: 100%;
     border-radius: 10px;
     background-color: var(--color1);
-}
+    }
 
-.texto{
+.text span{
     display: flex;
+    align-items: center;
+    text-align: center;
     justify-content: center;
-    margin: 15px;
-    width: 150px;
-    height: 20px;
-    background-color: var(--color2);
-    border-radius: 10px;
-}
+    color: var(--white);
+    font-size: 14px;
+} 
 
-.texto p{
-    color: #ec3b0f;
-    margin: 0px 0px 0px 10px;
-    background-color: bisque;
-}

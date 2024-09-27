@@ -63,7 +63,7 @@ ul a{
     padding: 10px 40px;
 }
 
-li, a{
+header li, a{
     font-size: 20px;
     font-weight: 500;
 }
@@ -246,7 +246,7 @@ li span{
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-7.5px);
+      transform: translateY(-3.5px);
     }
   }
 .text span:nth-child(1) {

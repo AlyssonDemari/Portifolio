@@ -37,13 +37,24 @@ body{
 /* nav bar */
 
 
-.nav{
-    padding: 30px;
+header{
+    width: 100%;
+    padding: 30px 0px 0px 0px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    background-color: ;
+}
+
+.flex{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--color2);
-    font-weight: 500;
 }
 
 ul{
@@ -53,6 +64,11 @@ ul{
 ul a{
     color: var(--color1);
     padding: 10px 40px;
+}
+
+li, a{
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .hover-logo:hover a {
@@ -80,6 +96,7 @@ ul a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top:100px ;
     padding: 10%;
 }
 

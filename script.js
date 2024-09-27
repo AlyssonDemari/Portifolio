@@ -7,7 +7,7 @@ progressoCSS.setAttribute("style", "width: 90%;");
 const progressoJS = document.querySelectorAll(".barra div")[2];
 progressoJS.setAttribute("style", "width: 50%;");
 
- const progressoPYTHON = document.querySelectorAll(".barra div")[3];
+const progressoPYTHON = document.querySelectorAll(".barra div")[3];
 progressoPYTHON.setAttribute("style", "width: 30%;"); 
 
 const progressoREACT = document.querySelectorAll(".barra div")[4];

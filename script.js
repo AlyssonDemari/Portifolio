@@ -1,3 +1,12 @@
+// nav
+window.addEventListener("scroll", function(){
+    let header = document.querySelector('#header')
+    header.classList.toggle('rolagem',window.scrollY > 150)
+})
+
+
+
+// Progrsso 
 const progressoHTML = document.querySelectorAll(".barra div")[0];
 progressoHTML.setAttribute("style", "width: 90%;");
 

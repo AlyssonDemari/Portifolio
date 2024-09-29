@@ -76,6 +76,10 @@ header li, a{
     box-shadow: 12px 8px 5px 1px rgba(0,0,0,0.1);
 }
 
+.banner{
+    
+}
+
 .nav-logo{
     display: flex;
     align-items: center;

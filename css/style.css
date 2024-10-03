@@ -6,6 +6,7 @@
     --color1: #263138;
     --color2: #445964;
     --color3: #ec3b0f;
+    --color4: #97a3aa;
     --white: #FFF;
 }
 
@@ -16,6 +17,7 @@
     text-decoration: none;
     list-style-type: none;
     font-family: var(--fonte-padrao);
+    scroll-behavior: smooth;
 }
 
 a{
@@ -73,7 +75,10 @@ ul a{
 header li, a{
     font-size: 20px;
     font-weight: 500;
+    border-radius: 20px;
+    transition: background-color 0.8s;
 }
+
 
 .hover-logo:hover a {
     background-color: var(--color3);
@@ -81,6 +86,8 @@ header li, a{
     padding: 10px 40px;
     border-radius: 20px;
     box-shadow: 12px 8px 5px 1px rgba(0,0,0,0.1);
+    background-color: #ec3b0f;
+    transition: 0.5s;
 }
 
 .nav-logo{
@@ -94,7 +101,7 @@ header li, a{
 }
 
 /* landing page */
-.lading-page{
+#lading-page{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -102,7 +109,7 @@ header li, a{
     padding: 10%;
 }
 
-.lading-page h1{
+#lading-page h1{
     color: var(--color2);
     font-size: 72px;
     font-style: normal;
@@ -110,7 +117,7 @@ header li, a{
     line-height: normal;
 }
 
-.lading-page p{
+#lading-page p{
     color: var(--color1);
     font-size: 24px;
     font-style: normal;
@@ -118,7 +125,7 @@ header li, a{
     line-height: normal;
 }
 
-.lading-page button{
+#lading-page button{
     margin: 50px 0px;
     border-radius: 20px;
     width: 210px;
@@ -130,12 +137,14 @@ header li, a{
     font-style: normal;
     font-weight: 900;
     line-height: normal;
-    border: none;
+    border: none;    
+    transition: background-color 0.8s;
 }
 
-.lading-page button:hover{
+#lading-page button:hover{
     background-color: var(--color3);
     box-shadow: 12px 8px 5px 1px rgba(0,0,0,0.1);
+    transition: background-color 0.8s;
 }
 
 
@@ -161,7 +170,7 @@ section figure img{
 
 /* HARD SKILLS */
 article{
-    height: 90%;
+    height: 93%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -192,24 +201,25 @@ article h2{
     color: var(--color2);
     font-family: var(--fonte-padrao);
     padding: 60px 0px 20px 0px;
+    text-align: center;
     font-size: 54px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
 }
 
-.hard-skills{
+#hard-skills{
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
-.hard-skills ul{
+#hard-skills ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
 }
 
-.hard-skills li{
+#hard-skills li{
     padding: 30px 80px 70px 80px;
 }
 
@@ -257,85 +267,148 @@ li span{
       transform: translateY(-3.5px);
     }
   }
-.text span:nth-child(1) {
-    animation-delay: 0s;
-}
-.text span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-.text span:nth-child(3) {
-    animation-delay: 0.4s;
-}
-.text span:nth-child(4) {
-    animation-delay: 0.6s;
-}
-.text span:nth-child(5) {
-    animation-delay: 0.8s;
-}
-.text span:nth-child(6) {
-    animation-delay: 0.8s;
-}
-.text span:nth-child(7) {
-    animation-delay: 0.8s;
+    .text span:nth-child(1) {
+        animation-delay: 0s;
+    }
+    .text span:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    .text span:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+    .text span:nth-child(4) {
+        animation-delay: 0.6s;
+    }
+    .text span:nth-child(5) {
+        animation-delay: 0.8s;
+    }
+    .text span:nth-child(6) {
+        animation-delay: 0.8s;
+    }
+    .text span:nth-child(7) {
+        animation-delay: 0.8s;
 }
 
 /* projetos */
 
-.portifolio{
-    background-color: aqua;
+#portifolio{
     height: 93vh;
     display: flex;
     flex-direction: column;
 }
 .container-leg{
-    background-color: aquamarine;
     display: flex;
-    flex-direction: row;
-    margin: 100px;
+    flex-direction: column;
+    margin: 70px 70px 0px 70px;
 }
 
 .container-leg h2{
-    display: inline-block;
     font-size: 54px; 
-    background-color: purple;
     width: 300px;
     font-size: 64px;
     font-weight: 900;
 }
 .container-leg p{
-    display: inline-block;
-    background-color: bisque;
     width: 400px;
     margin: 0px 50px;
     font-size: 24px;
     font-weight: 500;
 }
 
-.botoes{
+.portifolio{
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.legendas{
+    display: flex;
+    align-items: center;
+}
+
+.btn-leg{
     margin: 10px 0px;
 }
 
-.botoes li{
-    background-color: #ec3b0f;
+.btn-leg li{
+    background-color: var(--color3);
+    color: var(--white);
     padding: 10px 20px;
     margin: 10px;
     border-radius: 20px;
+    transition: background-color 0.8s;
+}
+
+.btn-leg li:hover{
+    background-color: var(--color1);
+    transition: 0.5s;
 }
 
 .projetos{
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    margin: auto ;
+    grid-template-rows: repeat(2, 180px);
+    gap: 15px 40px;
+    padding: 30px;
+    margin: 50px auto ;
+    background-color: var(--color4);
+    border-radius: 25px 5px;
 }
 
+
 .projetos figure img{
-    width: 300px;
-    height: 200px;
-    margin: 20px;
+    width: 180px;
+    height: 120px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 25px 5px;
  }
 
- .teste{
+ .projetos .container-proj {
+    background-color: var(--color1);
+    height: 120px;
+    padding: 10px;
+    border-radius: 25px 5px;
     display: flex;
     flex-direction: column;
+    width: 180px;
+
+}
+
+ .projetos .container-proj:hover{
+    transform: scale(1.2);
+    height: 155px;
+    z-index: 1;
+    transition: 0.7s;
+ }
+
+ .projetos .container-proj img{
+    filter: sepia(100%) hue-rotate(-20deg) saturate(10%);
+ }
+
+ .projetos .container-proj:hover img{
+    filter: none;
+}
+
+ .btn-proj{
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+ }
+
+ .btn-proj a{
+    width: 70px;
+    font-size: 16px;
+    color: var(--white);
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    transition: background-color 0.8s;
+
+ }
+
+ .btn-proj a:hover{
+    background-color: var(--color3);
+    transition: 0.5s;
  }

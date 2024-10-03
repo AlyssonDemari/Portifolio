@@ -303,12 +303,14 @@ li span{
 }
 
 .container-leg h2{
+    color: var(--color2);
     font-size: 54px; 
     width: 300px;
     font-size: 64px;
     font-weight: 900;
 }
 .container-leg p{
+    color: var(--color2);
     width: 400px;
     margin: 0px 50px;
     font-size: 24px;

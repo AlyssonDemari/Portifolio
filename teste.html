@@ -1,0 +1,90 @@
+CSS CAROUSEL
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.carousel-container {
+  background-color: aqua;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 300px); /* 5 colunas de 300px */
+  gap: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10; /* Garante que os botões fiquem à frente do conteúdo */
+}
+
+#prev {
+  left: 0;
+  width: 5px;
+}
+
+#next {
+  right: 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <button id="prev" class="carousel-nav">Prev</button>
+        <div class="carousel-grid">
+          <div class="carousel-item">Item 1</div>
+          <div class="carousel-item">Item 2</div>
+          <div class="carousel-item">Item 3</div>
+          <div class="carousel-item">Item 4</div>
+          <div class="carousel-item">Item 5</div>
+        </div>
+        <button id="next" class="carousel-nav">Next</button>
+      </div>
+      
+      <script>
+        let currentSlide = 0;
+        const container = document.querySelector('.container');
+        const items = document.querySelectorAll('.item');
+        const totalSlides = items.length;
+        
+        document.getElementById('prev').addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                container.style.transform = `translateX(${-currentSlide * 610}px)`; // Ajuste a largura do item conforme necessário
+            }
+        });
+    
+        document.getElementById('next').addEventListener('click', () => {
+            if (currentSlide < totalSlides - 4) { // 4 corresponde ao número de itens visíveis ao mesmo tempo
+                currentSlide++;
+                container.style.transform = `translateX(${-currentSlide * 610}px)`; // Ajuste a largura do item conforme necessário
+            }
+        });
+    </script>
+</body>
+</html>

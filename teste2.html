@@ -8,7 +8,16 @@
 </head>
 <body>
     <div class="projetos">
-        <button class="botao" id="prev">Anterior</button>
+        <button class="btn-grid" id="prev">
+            <span>P</span>
+            <span>R</span>
+            <span>E</span>
+            <span>V</span>
+            <span>I</span>
+            <span>O</span>
+            <span>U</span>
+            <span>S</span>
+        </button>
         <div class="container-proj" >
             <figure><img src="imagens/projeto0.png" alt=""></figure>
             <div class="btn-proj">
@@ -72,15 +81,27 @@
                 <a target="_blank" href="#">Código</a>
             </div>
         </div>
-        <button class="botao2" id="next">Próximo</button>
+        <div class="container-proj" >
+            <figure><img src="imagens/teste.png" alt=""></figure>
+            <div class="btn-proj">
+                <a target="_blank" href="#">Previw</a>
+                <a target="_blank" href="#">Código</a>
+            </div>
+        </div>
+        <button class="btn-grid2" id="next">
+            <span>N</span>
+            <span>E</span>
+            <span>X</span>
+            <span>T</span>
+        </button>
     </div>
 
     <script>
         let currentSlide = 0;
         const items = document.querySelectorAll('.container-proj');
         const totalSlides = items.length;
-        const visibleItems = 4;
-        const itemWidth = 300;
+        const visibleItems = 7;
+        const itemWidth = 240;
     
         document.getElementById('prev').addEventListener('click', () => {
             if (currentSlide > 0) {

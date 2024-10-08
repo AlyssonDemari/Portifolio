@@ -1,0 +1,191 @@
+:root{
+    --fonte-padrao: "Roboto", sans-serif;
+    --color1: #263138;
+    --color2: #445964;
+    --color3: #ec3b0f;
+    --color4: #97a3aa;
+    --white: #FFF;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: var(--fonte-padrao);
+    scroll-behavior: smooth;
+}
+
+a{
+    color: var(--color1);
+}
+
+span{
+    color: black;
+}
+
+
+body{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.container-leg{
+    display: flex;
+    flex-direction: column;
+    margin: 70px 70px 0px 70px;
+}
+
+.container-leg h2{
+    color: var(--color2);
+    font-size: 54px; 
+    width: 300px;
+    font-size: 64px;
+    font-weight: 900;
+}
+.container-leg p{
+    color: var(--color2);
+    width: 400px;
+    margin: 0px 50px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.portifolio{
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.legendas{
+    display: flex;
+    align-items: center;
+}
+
+.btn-leg{
+    margin: 10px 0px;
+    display: flex;
+}
+
+.btn-leg ul{
+    display: flex;
+}
+
+.btn-leg li{
+    width: 100px;
+    background-color: var(--color3);
+    color: var(--white);
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    transition: background-color 0.8s;
+}
+
+.btn-leg li:hover{
+    background-color: var(--color1);
+    transition: 0.5s;
+}
+
+
+.btn-grid {  /* adicionei */
+    position: absolute;
+    right: 98%;
+    background-image: linear-gradient(to top, #445964 ,#97a3aa,#445964); /* Adicionei */
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    height: 100%;
+    width: 15px;
+}
+
+.btn-grid2 {  /* adicionei */
+    position: absolute;
+    top: 0%;
+    left: 98%;
+    color: white;
+    background-image: linear-gradient(to top, #445964 ,#97a3aa,#445964); /* Adicionei */
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    height: 100%;
+    width: 15px;
+}
+
+
+.projetos{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: repeat(2, 180px);
+    gap: 15px 40px;
+    width: 680px;  /* adicionei */
+    padding: 30px;
+    margin: auto;
+    background-color: var(--color4);
+    border-radius: 25px 5px;
+    overflow: hidden; /* adicionei */
+    position: relative;  /* adicionei */
+    /* overflow-x: auto; COLOCA UMA BARRA DE ROLAGEM  */
+}
+
+
+.projetos figure img{
+    width: 180px;
+    height: 120px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 25px 5px;
+ }
+
+ .projetos .container-proj {
+    background-color: var(--color1);
+    height: 120px;
+    padding: 10px;
+    border-radius: 25px 5px;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+
+}
+
+ .projetos .container-proj:hover{
+    transform: scale(1.2);
+    height: 155px;
+    z-index: 1;
+    transition: 0.7s;
+ }
+
+ .projetos .container-proj img{
+    filter: sepia(100%) hue-rotate(-20deg) saturate(10%);
+ }
+
+ .projetos .container-proj:hover img{
+    filter: none;
+}
+
+ .btn-proj{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+ }
+
+ .btn-proj a{
+    width: 70px;
+    font-size: 16px;
+    color: var(--white);
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    transition: background-color 0.8s;
+
+ }
+
+ .btn-proj a:hover{
+    background-color: var(--color3);
+    transition: 0.5s;
+    background-color: #ec3b0f;
+ }
+
+ 

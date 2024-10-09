@@ -232,7 +232,6 @@ li span{
     font-weight: 500;
 }
 
-
 .barra {
     width: 150px;
     height: 20px;
@@ -346,17 +345,44 @@ li span{
     transition: 0.5s;
 }
 
+.btn-grid {  /* adicionei */
+    position: absolute;
+    right: 98%;
+    background-image: linear-gradient(to top, #445964 ,#97a3aa,#445964); /* Adicionei */
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    height: 100%;
+    width: 15px;
+}
+
+.btn-grid2 {  /* adicionei */
+    position: absolute;
+    top: 0%;
+    left: 98%;
+    color: white;
+    background-image: linear-gradient(to top, #445964 ,#97a3aa,#445964); /* Adicionei */
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    height: 100%;
+    width: 15px;
+}
+
 .projetos{
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(2, 180px);
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: repeat(2, 175px);
     gap: 15px 40px;
-    padding: 30px;
+    width: 680px;
+    padding: 20px 45px;
     margin: 50px auto ;
     background-color: var(--color4);
     border-radius: 25px 5px;
+    overflow: hidden; /* adicionei */
+    position: relative;  /* adicionei */
+    overflow-x: auto; 
 }
-
 
 .projetos figure img{
     width: 180px;
@@ -378,7 +404,8 @@ li span{
 }
 
  .projetos .container-proj:hover{
-    transform: scale(1.2);
+    background-color: #ec3b0f;
+    transform: scale(1.1);
     height: 155px;
     z-index: 1;
     transition: 0.7s;

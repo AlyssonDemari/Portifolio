@@ -5,6 +5,30 @@ window.addEventListener("scroll", function(){
 })
 
 
+let currentSlide = 0;
+const items = document.querySelectorAll('.container-proj');
+const totalSlides = items.length;
+const visibleItems = 7;
+const itemWidth = 240;
+
+document.getElementById('prev').addEventListener('click', () => {
+    if (currentSlide > 0) {
+        currentSlide--;
+        items.forEach(item => {
+            item.style.transform = `translateX(${-currentSlide * itemWidth}px)`;
+        });
+    }
+});
+
+document.getElementById('next').addEventListener('click', () => {
+    if (currentSlide < totalSlides - visibleItems) {
+        currentSlide++;
+        items.forEach(item => {
+            item.style.transform = `translateX(${-currentSlide * itemWidth}px)`;
+        });
+    }
+});
+
 
 // Progrsso 
 const progressoHTML = document.querySelectorAll(".barra div")[0];
@@ -24,5 +48,7 @@ progressoREACT.setAttribute("style", "width: 0%;");
 
 const progressoMSQL = document.querySelectorAll(".barra div")[5];
 progressoMSQL.setAttribute("style", "width: 90%;"); 
+
+
 
 

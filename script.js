@@ -52,3 +52,6 @@ progressoMSQL.setAttribute("style", "width: 90%;");
 
 
 
+function erro(){
+    alert('Desculpe pelo transtorno, mas o filtro de projetos ainda não está funcionando')
+}

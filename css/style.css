@@ -345,10 +345,10 @@ li span{
     transition: 0.5s;
 }
 
-.btn-grid {  /* adicionei */
+.btn-grid { 
     position: absolute;
     right: 98%;
-    background-image: linear-gradient(to top, #445964 ,#97a3aa,#445964); /* Adicionei */
+    background-image: linear-gradient(to top, #445964 ,#97a3aa,#445964);
     border: none;
     cursor: pointer;
     z-index: 1;
@@ -356,12 +356,12 @@ li span{
     width: 15px;
 }
 
-.btn-grid2 {  /* adicionei */
+.btn-grid2 { 
     position: absolute;
     top: 0%;
     left: 98%;
     color: white;
-    background-image: linear-gradient(to top, #445964 ,#97a3aa,#445964); /* Adicionei */
+    background-image: linear-gradient(to top, #445964 ,#97a3aa,#445964);
     border: none;
     cursor: pointer;
     z-index: 1;
@@ -379,9 +379,9 @@ li span{
     margin: 50px auto ;
     background-color: var(--color4);
     border-radius: 25px 5px;
-    overflow: hidden; /* adicionei */
-    position: relative;  /* adicionei */
-    overflow-x: auto; 
+    overflow: hidden;
+    position: relative;
+    /* overflow-x: auto; caso queira adicionar a barra de rolagem e remover os botões */
 }
 
 .projetos figure img{

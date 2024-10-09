@@ -1,0 +1,50 @@
+.projetos{
+    background-color: aqua;
+    height: 400px;
+    width: 100%;
+}
+
+.buttons{
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.box{
+    float: left;
+    background-color: white;
+    width: 125px;
+    gap: 1rem;
+    line-height: 125px;
+    text-align: center;
+    margin: 10px;
+    display: block;
+}
+
+.show{
+    display: none;
+}
+
+.categoria1{
+    background-color: blue;
+}
+.categoria2{
+    background-color: green;
+}
+.categoria3{
+    background-color: rgb(255, 51, 0);
+}
+
+.container-proj {
+    background-color: var(--color1);
+    height: 120px;
+    padding: 10px;
+    border-radius: 25px 5px;
+    flex-direction: column;
+    width: 180px;
+
+}
+
+img{
+    width: 200px;
+}

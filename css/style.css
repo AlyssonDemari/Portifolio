@@ -34,9 +34,11 @@ body{
     display: flex;
     flex-direction: column;
     margin: auto;
+
 }
 
 /* navbar */
+
 header{
     width: 100%;
     padding: 30px 0px 0px 0px;
@@ -50,6 +52,7 @@ header.rolagem{
     background-image: linear-gradient(to bottom, #445964, #FFF );
     padding: 0px 0px 0px 0px;
     height: 70px;
+    z-index: 2;
 }
 
 .container{
@@ -105,7 +108,8 @@ header li, a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top:100px ;
+    margin-top:100px;
+    margin-bottom: 150px;
     padding: 10%;
 }
 
@@ -169,6 +173,11 @@ section figure img{
 }
 
 /* HARD SKILLS */
+#sobre{
+    scroll-margin-top: 60px;
+}
+
+
 article{
     height: 93%;
     display: flex;
@@ -294,6 +303,8 @@ li span{
     height: 93vh;
     display: flex;
     flex-direction: column;
+    margin: 150px 0px;
+    scroll-margin-top: 60px;
 }
 .container-leg{
     display: flex;
@@ -356,6 +367,11 @@ li span{
     width: 15px;
 }
 
+.btn-grid:hover, 
+.btn-grid2:hover{
+    background-image: linear-gradient(to top, #97a3aa ,#445964,#97a3aa);
+}
+
 .btn-grid2 { 
     position: absolute;
     top: 0%;
@@ -404,7 +420,7 @@ li span{
 }
 
  .projetos .container-proj:hover{
-    background-color: #ec3b0f;
+    background-color:var(--color2);
     transform: scale(1.1);
     height: 155px;
     z-index: 1;
@@ -441,3 +457,90 @@ li span{
     background-color: var(--color3);
     transition: 0.5s;
  }
+
+ /* Minhas techs */
+
+#usados{
+    height: 92vh;
+    text-align: center;
+    margin: 150px 0px;
+    scroll-margin-top: 90px;
+    transition: 0.5s;
+}
+
+
+#usados h1{
+    color: var(--color2);
+    font-size: 54px; 
+    font-weight: 900;
+    padding: 70px 0px;
+}
+#usados h2{
+    color: var(--color2);
+    font-size: 24px;
+    font-weight: 900;
+}
+#usados p{
+    color: var(--color2);
+    margin: 0px 50px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+i {
+    transition: 1.5s;
+}
+
+#usados .fa-brands{
+    font-size: 150px;
+    margin: 30px 50px;
+    transition: background-color 0.8s;
+}
+#usados .fa-brands:hover{
+    color: var(--color3);
+    transition: 0.5s;
+}
+
+/* FOOTER */
+
+footer{
+    background-image: linear-gradient(to top, #445964, #FFF );    
+    color: white;
+    width: 99.2vw; 
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+footer a{
+    color: var(--white);
+}
+
+footer .fa-solid{
+    margin: 15px 20px;
+    font-size: 20px;
+}
+
+.redes-footer i{
+    margin: 30px;
+    font-size: 45px;
+    transition: 1.5s;
+}
+
+.redes-footer i:hover{
+    color: var(--color3);
+    transition: 0.5s;
+}
+
+.contato p{
+    transition: 1.5s;
+}
+
+.contato p:hover{
+    color: var(--color3);
+    transition: 0.5s;
+}

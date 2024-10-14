@@ -85,7 +85,6 @@ header li, a{
 
 
 .hover-logo:hover a {
-    background-color: var(--color3);
     color:var(--white);
     padding: 10px 40px;
     border-radius: 20px;
@@ -566,7 +565,7 @@ footer .fa-solid{
 }
 
 
-@media (min-width: 360px) and (max-width: 767.98px){
+@media (min-width: 360px) and (max-width: 990.98px){ /**Tamanho para celulares */
     body{
         width: 100%;
         display: flex;
@@ -698,6 +697,7 @@ footer .fa-solid{
         height: 1300px;
     }
 
+
     .container-leg{
         width: 350px;
         display: flex;
@@ -764,7 +764,7 @@ footer .fa-solid{
     }
 
     .projetos::-webkit-scrollbar-track {
-        background-color: var(--color5); /* Cor do fundo da barra */
+        background-color: var(--color5);
     }
 
     .projetos figure img{
@@ -790,7 +790,7 @@ footer .fa-solid{
         /* Minhas techs */
 
         #usados{
-            height: 93vh;
+            height: 56vh;
         }
 
     #usados h1{
@@ -811,4 +811,60 @@ footer .fa-solid{
         display: flex;
         flex-direction: column;
     }
+}
+
+
+@media (min-width: 782px) and (max-width: 1400.98px){  /**Tamanho para tablets */
+    ul{
+        display: flex;
+        justify-content: end;
+    }
+    
+    ul a{
+        padding: 10px 5px;
+    }
+    
+    header li, a{
+        font-size: 15px;
+        border-radius: 20px;
+    }
+
+    .hover-logo:hover a {
+        padding: 10px 5px;
+    }
+    
+
+        /* landing page */
+    #lading-page{
+        padding: 100px 0px;
+    }
+
+    #lading-page h1{
+        font-size: 48px;
+    }
+
+    #lading-page p{
+        font-size: 20px;
+    }
+
+    #lading-page button{
+        margin: 30px 0px;
+        width: 160px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    #picture-logo{
+        width: 400px;
+    }
+    .redes i{
+        font-size: 40px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
 }

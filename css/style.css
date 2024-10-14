@@ -7,6 +7,7 @@
     --color2: #445964;
     --color3: #ec3b0f;
     --color4: #97a3aa;
+    --color5: #61686d1e;
     --white: #FFF;
 }
 
@@ -750,6 +751,20 @@ footer .fa-solid{
         width: 320px;
         height: 685px;
         overflow-y: scroll ;
+        border-radius: 20px 0px 0px 20px;
+    }
+
+    .projetos::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .projetos::-webkit-scrollbar-thumb {
+        background-color: var(--color3); 
+        border-radius: 10px;
+    }
+
+    .projetos::-webkit-scrollbar-track {
+        background-color: var(--color5); /* Cor do fundo da barra */
     }
 
     .projetos figure img{

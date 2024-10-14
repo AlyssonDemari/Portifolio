@@ -89,7 +89,7 @@ header li, a{
     padding: 10px 40px;
     border-radius: 20px;
     box-shadow: 12px 8px 5px 1px rgba(0,0,0,0.1);
-    background-color: #ec3b0f;
+    background-color: var(--color3);
     transition: 0.5s;
 }
 
@@ -155,15 +155,6 @@ header li, a{
 #picture-logo{
     border-radius: 0px 0px 30px 30px;
 }
-
-section figure img{
-    filter: hue-rotate(330deg) saturate(200%);
-    padding: 10px;
-    height: 35px;
-    width: 35px;
-    border-radius: 10px;
-}
-
 .redes{
     display: flex;
 }
@@ -466,7 +457,7 @@ li span{
  /* Minhas techs */
 
 #usados{
-    height: 92vh;
+    height: 50vh;
     text-align: center;
     margin: 150px 0px;
     scroll-margin-top: 90px;
@@ -492,7 +483,7 @@ li span{
     font-weight: 500;
 }
 
-i {
+#usados i {
     transition: 1.5s;
 }
 
@@ -533,19 +524,193 @@ footer .fa-solid{
 .redes-footer i{
     margin: 30px;
     font-size: 45px;
-    transition: 1.5s;
+    transition: 0.1s;
 }
 
 .redes-footer i:hover{
     color: var(--color3);
-    transition: 0.5s;
+    transition: 0.9s;
 }
 
 .contato p{
-    transition: 1.5s;
+    transition: 0.9s;
 }
 
 .contato p:hover{
     color: var(--color3);
-    transition: 0.5s;
+    transition: 0.9s;
+}
+
+
+@media (min-width: 360px) and (max-width: 767.98px){
+    body{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    
+    }
+
+
+        /* landing page */
+    #lading-page{
+        justify-content: center;
+        flex-direction: column;
+        width: 300px;
+        margin: 100px auto;
+    }
+
+    #lading-page h1{
+        font-size: 42px;
+    }
+
+    #lading-page p{
+        font-size: 21px;
+    }
+
+    #lading-page button{
+        margin: 30px 0px;
+        width: 130px;
+        height: 35px;
+        font-size: 11px;
+    }
+
+    #picture-logo{
+        border-radius: 0px 0px 30px 30px;
+        width: 300px;
+    }
+    .redes i{
+        margin: 10px;
+        font-size: 40px;
+    }
+
+
+        /* HARD SKILLS */
+    #sobre{
+        scroll-margin-top: 60px;
+    }
+
+    article h1{
+        font-size: 42px;
+    }
+
+    article p{
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    article h2{
+        padding: 30px 0px 20px 0px;
+        font-size: 42px;
+    }
+
+
+    #hard-skills ul{
+        grid-template-columns: repeat(1, 1fr); 
+    }
+
+
+        /* projetos */
+
+    #portifolio{
+        height: 1300px;
+    }
+
+    .container-leg{
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .container-leg h2{
+        margin: 0px;
+        width: 250px;
+        font-size: 62px;
+    }
+    .container-leg p{
+        width: 350px;
+        font-size: 20px;
+        font-weight: 500;
+        margin:10px 0px;
+    }
+
+    .legendas{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .btn-leg ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .btn-leg li{
+        padding: 10px 20px;
+        margin: 2px;
+        border-radius: 10px;
+    }
+
+    .btn-grid { 
+        display: none;
+    }
+
+    .btn-grid2 { 
+        display: none;
+    }
+
+    .projetos{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        grid-template-rows: repeat(9, 175px);
+        gap: 60px;
+        width: 320px;
+        height: 685px;
+        overflow-y: scroll ;
+    }
+
+    .projetos figure img{
+        width: 180px;
+        height: 160px;
+    }
+
+    .projetos .container-proj {
+        width: 92%;
+        height: 190px;
+    }
+
+    .projetos .container-proj:hover{
+        height: 190px;
+    }
+
+    .projetos .container-proj img{
+        filter: sepia(100%) hue-rotate(-20deg) saturate(10%);
+        width: 100%;
+    }
+
+
+        /* Minhas techs */
+
+    #usados h1{
+        color: var(--color2);
+        font-size: 44px; 
+        font-weight: 900;
+        padding: 60px 0px;
+    }
+
+    #usados .fa-brands{
+        font-size: 80px;
+        margin: 30px 20px;
+    }
+
+    /* FOOTER */
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+
 }

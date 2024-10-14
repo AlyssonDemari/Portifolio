@@ -167,10 +167,15 @@ section figure img{
 .redes{
     display: flex;
 }
-
-.redes img:hover {
-    filter: sepia(100%) hue-rotate(-20deg) saturate(100000%);
+.redes i{
+    margin: 10px;
+    font-size: 50px;
 }
+.redes i:hover{
+    color: var(--color3);
+    transition: 0.5s;
+}
+
 
 /* HARD SKILLS */
 #sobre{

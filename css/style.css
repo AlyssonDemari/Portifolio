@@ -565,12 +565,13 @@ footer .fa-solid{
 }
 
 
-@media (min-width: 360px) and (max-width: 990.98px){ /**Tamanho para celulares */
+@media (min-width: 360px) and (max-width: 767.98px){ /**Tamanho para celulares */
     body{
         width: 100%;
         display: flex;
         flex-direction: column;
         margin: auto;
+        background-color: pink;
     }
 
     header{
@@ -814,7 +815,312 @@ footer .fa-solid{
 }
 
 
-@media (min-width: 782px) and (max-width: 1400.98px){  /**Tamanho para tablets */
+@media (min-width:768px) and (max-width: 991.98px){ /**Tamanho para alguns celulares e tablets */
+
+    header{
+        width: 100%;
+        height: 8vh;
+        padding: 0px 0px 0px 0px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        transition: 0.5s;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-image: linear-gradient(to top, #445964, #FFF );    
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+
+      @keyframes navLinkFade {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      
+      .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+      }
+      
+      .mobile-menu.active .line2 {
+        opacity: 0;
+      }
+      
+      .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+      }
+
+
+    /* landing page */
+
+    #lading-page{
+        padding: 40px 0px;
+    }
+
+    #lading-page h1{
+        font-size: 27px;
+    }
+
+    #lading-page p{
+        font-size: 18px;
+    }
+
+    #lading-page button{
+        margin: 30px 0px;
+        width: 140px;
+        height: 29px;
+        font-size: 11px;
+    }
+
+    #picture-logo{
+        width: 50%;
+    }
+    .redes i{
+        font-size: 40px;
+    }
+
+
+    /* HARD SKILLS*/
+
+    #sobre{
+        scroll-margin-top: 60px;
+    }
+    
+    
+    article{
+        height: 93%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #logo-landing{
+        width: 25%;
+    }
+    
+    article p{
+        width: 90%;
+    }
+    
+    
+    #hard-skills ul{
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    /* projetos */
+
+        #portifolio{
+        height: 1300px;
+    }
+
+
+    .container-leg{
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .container-leg h2{
+        margin: 0px;
+        width: 250px;
+        font-size: 62px;
+    }
+    .container-leg p{
+        width: 350px;
+        font-size: 20px;
+        font-weight: 500;
+        margin:10px 0px;
+    }
+
+    .legendas{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .btn-leg ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .btn-leg li{
+        padding: 10px 20px;
+        margin: 2px;
+        border-radius: 10px;
+    }
+
+    .btn-grid { 
+        display: none;
+    }
+
+    .btn-grid2 { 
+        display: none;
+    }
+
+    .projetos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(6, 175px);
+        gap: 60px;
+        width: 520px;
+        height: 450px;
+        overflow-y: scroll ;
+        border-radius: 20px 0px 0px 20px;
+    }
+
+    .projetos::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .projetos::-webkit-scrollbar-thumb {
+        background-color: var(--color3); 
+        border-radius: 10px;
+    }
+
+    .projetos::-webkit-scrollbar-track {
+        background-color: var(--color5);
+    }
+
+    .projetos figure img{
+        width: 180px;
+        height: 160px;
+    }
+
+    .projetos .container-proj {
+        width: 92%;
+        height: 190px;
+    }
+
+    .projetos .container-proj:hover{
+        height: 190px;
+    }
+
+    .projetos .container-proj img{
+        filter: sepia(100%) hue-rotate(-20deg) saturate(10%);
+        width: 100%;
+    }
+    
+
+    /* Minhas techs */
+
+    #usados{
+        height: 93vh;
+        text-align: center;
+        margin: 150px 0px;
+        scroll-margin-top: 90px;
+        transition: 0.5s;
+    }
+
+
+    #usados h1{
+        color: var(--color2);
+        font-size: 54px; 
+        font-weight: 900;
+        padding: 70px 0px;
+    }
+    #usados h2{
+        color: var(--color2);
+        font-size: 24px;
+        font-weight: 900;
+    }
+    #usados p{
+        color: var(--color2);
+        margin: 0px 50px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    #usados i {
+        transition: 1.5s;
+    }
+
+    #usados .fa-brands{
+        font-size: 150px;
+        margin: 30px 50px;
+        transition: background-color 0.8s;
+    }
+    #usados .fa-brands:hover{
+        color: var(--color3);
+        transition: 0.5s;
+    }
+
+    /* FOOTER */
+
+    footer{
+        background-image: linear-gradient(to top, #445964, #FFF );    
+        color: white;
+        width: 99.2vw; 
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative; 
+        left: 50%; 
+        transform: translateX(-50%); 
+    }
+
+    footer a{
+        color: var(--white);
+    }
+
+    footer .fa-solid{
+        margin: 15px 20px;
+        font-size: 20px;
+    }
+
+    .redes-footer i{
+        margin: 30px;
+        font-size: 45px;
+        transition: 0.1s;
+    }
+
+    .redes-footer i:hover{
+        color: var(--color3);
+        transition: 0.9s;
+    }
+
+    .contato p{
+        transition: 0.9s;
+    }
+
+    .contato p:hover{
+        color: var(--color3);
+        transition: 0.9s;
+    }
+    
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px){  /**Tamanho para tablets */
     ul{
         display: flex;
         justify-content: end;

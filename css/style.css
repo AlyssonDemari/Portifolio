@@ -861,6 +861,15 @@ footer .fa-solid{
         font-size: 40px;
     }
 
+    #portifolio{
+        height: 900px;
+    }
+
+    #usados{
+        height: 50vh;
+        margin: 100px 0px;
+    }
+
     footer{
         display: flex;
         flex-direction: column;

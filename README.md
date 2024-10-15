@@ -9,10 +9,10 @@ HTML5 & CSS3: Construindo layouts semânticos e responsivos. <br>
 JavaScript & TypeScript: Criação de aplicações interativas e dinâmicas. <br>
 React & Vue.js: Desenvolvimento de interfaces modernas com alta performance. <br>
 Git & GitHub: Versionamento de código e colaboração em projetos. <br>
-/* Projetos em Destaque:
+<--!  Projetos em Destaque:
 Projeto 1: Uma aplicação de e-commerce totalmente funcional.
 Projeto 2: Um dashboard interativo utilizando APIs externas.
-Projeto 3: Um blog pessoal desenvolvido com React e integrado com CMS. */
+Projeto 3: Um blog pessoal desenvolvido com React e integrado com CMS. */ -->
 Cada projeto foi uma oportunidade de aprimorar minhas habilidades, superar desafios técnicos e entregar resultados que me deixam orgulhoso. Dê uma olhada nos repositórios para ver como cada detalhe foi implementado!
 <br>
 Fique à vontade para explorar o código, compartilhar feedback e, claro, colaborar em novos desafios. 😄

@@ -144,7 +144,7 @@ transition: 0.3s;
     line-height: normal;
 }
 
-#lading-page p{
+#lading-page > div > p{
     color: var(--color1);
     font-size: 24px;
     font-style: normal;
@@ -190,6 +190,59 @@ transition: 0.3s;
     transition: 0.5s;
 }
 
+.flip-card-container {
+    perspective: 900px;
+}
+
+.flip-card{
+    width: 520px;
+    height: 480px;
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease-in-out;
+    position: relative;
+    border-radius: 15px;
+}
+
+.flip-card-container:hover .flip-card{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.flip-card-back {
+    background-color: var(--color4);
+    transform: rotateY(180deg)
+}
+
+.flip-card-back  p{
+    margin: 20px 0px 40px 0px;
+    line-height: 1.4;
+    width: 450px;
+    font-size: 17px;
+}
+
+.flip-card-back a{
+    color: var(--white);
+    padding: 10px;
+    background-color: var(--color1);
+}
+.flip-card-back a:hover{
+    color: var(--white);
+    background-color: var(--color3);
+    padding: 10px;
+}
 
 /* HARD SKILLS */
 #sobre{
@@ -406,7 +459,7 @@ li span{
 
 .projetos{
     display: grid;
-    grid-template-columns: repeat(5, 1fr); 
+    grid-template-columns: repeat(6, 1fr); /*! Quando quebrar o grid aumentar o primeiro número*/
     grid-template-rows: repeat(2, 175px);
     gap: 15px 40px;
     width: 680px;
@@ -573,6 +626,7 @@ footer .fa-solid{
 
 @media (min-width: 360px) and (max-width: 767.98px){ /**Tamanho para celulares */
     body{
+        background-color: aqua;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -651,7 +705,7 @@ footer .fa-solid{
         font-size: 42px;
     }
 
-    #lading-page p{
+    #lading-page > p{
         font-size: 21px;
     }
 
@@ -669,6 +723,33 @@ footer .fa-solid{
     .redes i{
         margin: 10px;
         font-size: 40px;
+    }
+
+    .flip-card{
+        width: 300px;
+        height: 280px;
+        transform-style: preserve-3d;
+        transition: transform 0.7s ease-in-out;
+        position: relative;
+        top: 60px;
+        border-radius: 15px;
+    }
+
+    .flip-card-back  p{
+        margin: 20px;
+        line-height: 1.4;
+        width: 250px;
+        font-size: 10px;
+    }
+    .flip-card-back  a{
+        padding: 5px;
+        font-size: 10px;
+        background-color: var(--color1);
+    }
+    .flip-card-back  a:hover{
+        font-size: 10px;
+        padding: 5px;
+        background-color: var(--color3);
     }
 
 
@@ -826,6 +907,10 @@ footer .fa-solid{
 
 @media (min-width:768px) and (max-width: 991.98px){ /**Tamanho para alguns celulares e tablets */
 
+
+    body{
+        background-color: aquamarine;
+    }
     header{
         width: 100%;
         height: 8vh;
@@ -891,13 +976,14 @@ footer .fa-solid{
 
     #lading-page{
         padding: 40px 0px;
+        justify-content: space-between;
     }
 
     #lading-page h1{
         font-size: 27px;
     }
 
-    #lading-page p{
+    #lading-page > p{  /*! > usado para que não seja aplicado no flip*/
         font-size: 18px;
     }
 
@@ -909,10 +995,38 @@ footer .fa-solid{
     }
 
     #picture-logo{
-        width: 50%;
+        width: 100%;
     }
     .redes i{
         font-size: 40px;
+    }
+
+    .flip-card{
+        width: 420px;
+        height: 430px;
+        transform-style: preserve-3d;
+        transition: transform 0.7s ease-in-out;
+        position: relative;
+        top: 60px;
+        border-radius: 15px;
+    }
+
+    .flip-card-back p{
+        margin: 20px;
+        line-height: 1.4;
+        width: 360px;
+        height: 330px;
+        font-size: 16px;
+    }
+    .flip-card-back  a{
+        padding: 5px;
+        background-color: var(--color1);
+        font-size: 20px;
+    }
+    .flip-card-back  a:hover{
+        font-size: 20px;
+        padding: 5px;
+        background-color: var(--color3);
     }
 
 

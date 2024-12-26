@@ -174,6 +174,10 @@ header li, a{
     transition: background-color 0.8s;
 }
 
+#curriculo{
+    color: var(--white);
+}
+
 
 #picture-logo{
     border-radius: 0px 0px 30px 30px;
@@ -190,59 +194,6 @@ header li, a{
     transition: 0.5s;
 }
 
-.flip-card-container {
-    perspective: 900px;
-}
-
-.flip-card{
-    width: 520px;
-    height: 480px;
-    transform-style: preserve-3d;
-    transition: transform 0.7s ease-in-out;
-    position: relative;
-    border-radius: 15px;
-}
-
-.flip-card-container:hover .flip-card{
-    transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.flip-card-back {
-    background-color: var(--color4);
-    transform: rotateY(180deg);
-}
-
-.flip-card-back  p{
-    margin: 20px 0px 40px 0px;
-    line-height: 1.4;
-    width: 450px;
-    font-size: 17px;
-}
-
-.flip-card-back a{
-    color: var(--white);
-    padding: 10px;
-    background-color: var(--color1);
-}
-.flip-card-back a:hover{
-    color: var(--white);
-    background-color: var(--color3);
-    padding: 10px;
-}
 
 /* HARD SKILLS */
 #sobre{

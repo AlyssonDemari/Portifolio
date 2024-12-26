@@ -1194,6 +1194,7 @@ footer .fa-solid{
 
 
 @media (min-width: 992px) and (max-width: 1199.98px){  /**Tamanho para tablets */
+
     ul{
         display: flex;
         justify-content: end;
@@ -1245,7 +1246,7 @@ footer .fa-solid{
     }
 
     #usados{
-        height: 50vh;
+        height: 75vh;
         margin: 100px 0px;
     }
 

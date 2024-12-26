@@ -1,0 +1,173 @@
+/*? container geral do portifólio*/
+#portifolio{
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 150px 0px;
+    gap: 50px;
+    scroll-margin-top: 60px;
+}
+
+/*? container da legenda */
+.container-leg{
+    display: flex;
+    flex-direction: column;
+    margin: 70px 70px 0px 70px;
+}
+
+.container-leg h2{
+    color: var(--color2);
+    font-size: 54px; 
+    width: 300px;
+    font-size: 64px;
+    font-weight: 900;
+}
+.container-leg p{
+    color: var(--color2);
+    width: 400px;
+    margin: 0px 50px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/*? estilização da legenda */
+.legendas{
+    display: flex;
+    align-items: center;
+}
+
+.btn-leg{
+    margin: 10px 0px;
+}
+
+.btn-leg li{
+    background-color: var(--color3);
+    color: var(--white);
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    transition: background-color 0.8s;
+}
+
+.btn-leg li:hover{
+    background-color: var(--color1);
+    transition: 0.5s;
+}
+
+/*? ITENS DO GRID */
+.container-slide{
+    display: flex;
+    justify-content: space-between;
+    width: 750px;
+    height: 441px;
+    border-radius: 10px;
+    position: relative;
+}
+
+
+.items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* caso quebre o grid aumentar o primeiro número*/
+    grid-template-rows: repeat(2, 175px);
+    transition: all 1s;
+    gap: 45px;
+}
+
+.container-item{
+    position: absolute;
+    padding: 30px;
+    width: 690px;
+    height: 380px;
+    background-color: var(--color4);
+    border-radius: 25px 5px;
+    overflow: hidden;
+}
+
+.container-proj {
+    background-color: var(--color1);
+    height: 120px;
+    padding: 10px;
+    border-radius: 25px 5px;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    transition: all 1s;
+}
+
+.container-proj:hover{
+    background-color:var(--color2);
+    transform: scale(1.1);
+    height: 155px;
+    z-index: 1;
+    transition: 0.7s;
+}
+
+.container-proj img{
+    filter: sepia(100%) hue-rotate(-20deg) saturate(10%);
+}
+
+.container-proj:hover img{
+    filter: none;
+}
+
+figure img{
+    width: 180px;
+    height: 120px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 25px 5px;
+}
+
+.action-button{
+    font: bold 30px sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 99.5%;
+    border-radius: 10px;
+    color: #00000000;
+    z-index: 1;
+    user-select: none;
+}
+
+.action-button:hover{
+    color: #cad5de;
+    background-color: rgba(0, 0, 0, 0.315);
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 0px 10px 10px 0px;
+    user-select: none;
+}
+
+#previous{
+    border-radius: 25px 0px 0px 5px;
+}
+#next{
+    border-radius: 0px 5px 25px 0px;
+}
+
+/*? botoes de dentro dos projetos */
+.btn-proj{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.btn-proj a{
+    width: 70px;
+    font-size: 16px;
+    color: var(--white);
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    transition: background-color 0.8s;
+
+}
+
+.btn-proj a:hover{
+    background-color: var(--color3);
+    transition: 0.5s;
+}

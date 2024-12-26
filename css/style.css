@@ -19,11 +19,9 @@
     list-style-type: none;
     font-family: var(--fonte-padrao);
     scroll-behavior: smooth;
-}
-
-a{
     color: var(--color1);
 }
+
 
 span{
     color: black;
@@ -56,7 +54,7 @@ header.rolagem{
     z-index: 2;
 }
 
-.container{
+.container-header{
     width: 80%;
     margin: auto;
 }
@@ -126,7 +124,7 @@ header li, a{
     transition: 0.3s;
 }
 
-/* landing page */
+/*? landing page */
 #lading-page{
     display: flex;
     justify-content: space-between;
@@ -176,8 +174,8 @@ header li, a{
 
 #curriculo{
     color: var(--white);
+    font-size: 14px;
 }
-
 
 #picture-logo{
     border-radius: 0px 0px 30px 30px;
@@ -195,11 +193,10 @@ header li, a{
 }
 
 
-/* HARD SKILLS */
+/*? HARD SKILLS */
 #sobre{
     scroll-margin-top: 60px;
 }
-
 
 article{
     height: 93%;
@@ -232,7 +229,7 @@ article p{
 article h2{
     color: var(--color2);
     font-family: var(--fonte-padrao);
-    padding: 60px 0px 20px 0px;
+    padding: 0px 0px 20px 0px;
     text-align: center;
     font-size: 54px;
     font-style: normal;
@@ -255,8 +252,7 @@ article h2{
     padding: 30px 80px 70px 80px;
 }
 
-/* ANIMAÇÃO */
-
+/*? ANIMAÇÃO DO HARD SKILLS*/
 li span{
     font-family: var(--fonte-padrao);
     color: var(--color1);
@@ -297,7 +293,7 @@ li span{
     50% {
       transform: translateY(-3.5px);
     }
-  }
+    }
     .text span:nth-child(1) {
         animation-delay: 0s;
     }
@@ -314,21 +310,25 @@ li span{
         animation-delay: 0.8s;
     }
     .text span:nth-child(6) {
-        animation-delay: 0.8s;
+        animation-delay: 1.0s;
     }
     .text span:nth-child(7) {
-        animation-delay: 0.8s;
+        animation-delay: 1.2s;
 }
 
-/* projetos */
-
+/*? GRID DE PROJETOS  */
+/*? container geral do portifólio*/
 #portifolio{
     height: 93vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 150px 0px;
+    gap: 50px;
     scroll-margin-top: 60px;
 }
+
+/*? container da legenda */
 .container-leg{
     display: flex;
     flex-direction: column;
@@ -350,12 +350,7 @@ li span{
     font-weight: 500;
 }
 
-.portifolio{
-    height: 93vh;
-    display: flex;
-    flex-direction: column;
-}
-
+/*? estilização da legenda */
 .legendas{
     display: flex;
     align-items: center;
@@ -379,59 +374,36 @@ li span{
     transition: 0.5s;
 }
 
-.btn-grid { 
-    position: absolute;
-    right: 98%;
-    background-image: linear-gradient(to top, #445964 ,#97a3aa,#445964);
-    border: none;
-    cursor: pointer;
-    z-index: 1;
-    height: 100%;
-    width: 15px;
+/*? ITENS DO GRID */
+.container-slide{
+    display: flex;
+    justify-content: space-between;
+    width: 750px;
+    height: 441px;
+    border-radius: 10px;
+    position: relative;
 }
 
-.btn-grid:hover, 
-.btn-grid2:hover{
-    background-image: linear-gradient(to top, #97a3aa ,#445964,#97a3aa);
-}
 
-.btn-grid2 { 
-    position: absolute;
-    top: 0%;
-    left: 98%;
-    color: white;
-    background-image: linear-gradient(to top, #445964 ,#97a3aa,#445964);
-    border: none;
-    cursor: pointer;
-    z-index: 1;
-    height: 100%;
-    width: 15px;
-}
-
-.projetos{
+.items-wrapper {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /*! Quando quebrar o grid aumentar o primeiro número*/
+    grid-template-columns: repeat(7, 1fr); /* caso quebre o grid aumentar o primeiro número*/
     grid-template-rows: repeat(2, 175px);
-    gap: 15px 40px;
-    width: 680px;
-    padding: 20px 45px;
-    margin: 50px auto ;
+    transition: all 1s;
+    gap: 45px;
+}
+
+.container-item{
+    position: absolute;
+    padding: 30px;
+    width: 690px;
+    height: 380px;
     background-color: var(--color4);
     border-radius: 25px 5px;
     overflow: hidden;
-    position: relative;
-    /* overflow-x: auto; caso queira adicionar a barra de rolagem e remover os botões */
 }
 
-.projetos figure img{
-    width: 180px;
-    height: 120px;
-    margin: 0px;
-    padding: 0px;
-    border-radius: 25px 5px;
- }
-
- .projetos .container-proj {
+.container-proj {
     background-color: var(--color1);
     height: 120px;
     padding: 10px;
@@ -439,33 +411,71 @@ li span{
     display: flex;
     flex-direction: column;
     width: 180px;
-
+    transition: all 1s;
 }
 
- .projetos .container-proj:hover{
+.container-proj:hover{
     background-color:var(--color2);
     transform: scale(1.1);
     height: 155px;
     z-index: 1;
     transition: 0.7s;
- }
+}
 
- .projetos .container-proj img{
+.container-proj img{
     filter: sepia(100%) hue-rotate(-20deg) saturate(10%);
- }
+}
 
- .projetos .container-proj:hover img{
+.container-proj:hover img{
     filter: none;
 }
 
- .btn-proj{
+figure img{
+    width: 180px;
+    height: 120px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 25px 5px;
+}
+
+.action-button{
+    font: bold 30px sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 99.5%;
+    border-radius: 10px;
+    color: #00000000;
+    z-index: 1;
+    user-select: none;
+}
+
+.action-button:hover{
+    color: #cad5de;
+    background-color: rgba(0, 0, 0, 0.315);
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 0px 10px 10px 0px;
+    user-select: none;
+}
+
+#previous{
+    border-radius: 25px 0px 0px 5px;
+}
+#next{
+    border-radius: 0px 5px 25px 0px;
+}
+
+/*? botoes de dentro dos projetos */
+.btn-proj{
     display: flex;
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
- }
+}
 
- .btn-proj a{
+.btn-proj a{
     width: 70px;
     font-size: 16px;
     color: var(--white);
@@ -474,15 +484,15 @@ li span{
     border-radius: 20px;
     transition: background-color 0.8s;
 
- }
+}
 
- .btn-proj a:hover{
+.btn-proj a:hover{
     background-color: var(--color3);
     transition: 0.5s;
- }
+}
 
- /* Minhas techs */
 
+ /*? Minhas techs */
 #usados{
     height: 93vh;
     text-align: center;
@@ -676,35 +686,6 @@ footer .fa-solid{
         font-size: 40px;
     }
 
-    .flip-card{
-        width: 300px;
-        height: 280px;
-        transform-style: preserve-3d;
-        transition: transform 0.7s ease-in-out;
-        position: relative;
-        top: 60px;
-        border-radius: 15px;
-        z-index: 0;
-    }
-
-    .flip-card-back  p{
-        margin: 20px;
-        line-height: 1.4;
-        width: 250px;
-        font-size: 10px;
-    }
-    .flip-card-back  a{
-        padding: 5px;
-        font-size: 10px;
-        background-color: var(--color1);
-    }
-    .flip-card-back  a:hover{
-        font-size: 10px;
-        padding: 5px;
-        background-color: var(--color3);
-    }
-
-
         /* HARD SKILLS */
     #sobre{
         scroll-margin-top: 60px;
@@ -731,99 +712,164 @@ footer .fa-solid{
 
 
         /* projetos */
-
     #portifolio{
-        height: 1300px;
+        align-items: center;
+        height: 100%;
     }
 
-
+    /*? container da legenda */
     .container-leg{
-        width: 350px;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
+        width: 330px;
     }
 
     .container-leg h2{
-        margin: 0px;
-        width: 250px;
-        font-size: 62px;
+        font-size: 44px; 
+        width: 300px;
     }
     .container-leg p{
-        width: 350px;
+        width: 300px;
         font-size: 20px;
-        font-weight: 500;
-        margin:10px 0px;
     }
 
+    /*? estilização da legenda */
     .legendas{
         display: flex;
+        align-items: center;
         flex-direction: column;
-        align-items: start;
+    }
+
+    .btn-leg{
+        margin: 10px 0px;
+
     }
 
     .btn-leg ul{
+        flex-direction: column;
+    }
+    .btn-leg li{
+        margin: 4px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    /*? ITENS DO GRID */
+    .container-slide{
+        display: flex;
+        justify-content: center;
+        width: 220px;
+        height: 441px;
+        border-radius: 10px;
+        position: relative;
+    }
+
+
+    .items-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* caso quebre o grid aumentar o primeiro número*/
+        grid-template-rows: repeat(7, 175px);
+        transition: all 1s;
+        gap: 45px;
+        overflow: scroll;
+        justify-content: center;
+    }
+
+    .container-item{
+        position: absolute;
+        padding: 30px;
+        width: 220px;
+        height: 380px;
+        background-color: var(--color4);
+        border-radius: 5px;
+        overflow-y: scroll;
+    }
+
+    .container-item::-webkit-scrollbar {
+        width: 8px;
+      }
+  
+      .container-item::-webkit-scrollbar-track {
+        background :none;
+      }
+  
+      .container-item::-webkit-scrollbar-thumb {
+        background: var(--color3);
+        border-radius: 5px;
+      }
+
+    .container-proj {
+        background-color: var(--color1);
+        height: 120px;
+        padding: 10px;
+        border-radius: 25px 5px;
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        width: 189px;
+        transition: all 1s;
     }
 
-    .btn-leg li{
-        padding: 10px 20px;
-        margin: 2px;
-        border-radius: 10px;
+    .container-proj:hover{
+        background-color:var(--color2);
+        transform: none;
+        height: 155px;
+        z-index: 1;
+        transition: 0.7s;
     }
 
-    .btn-grid { 
-        display: none;
-    }
-
-    .btn-grid2 { 
-        display: none;
-    }
-
-    .projetos{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr); 
-        grid-template-rows: repeat(9, 175px);
-        gap: 60px;
-        width: 320px;
-        height: 685px;
-        overflow-y: scroll ;
-        border-radius: 20px 0px 0px 20px;
-    }
-
-    .projetos::-webkit-scrollbar {
-        width: 12px;
-    }
-
-    .projetos::-webkit-scrollbar-thumb {
-        background-color: var(--color3); 
-        border-radius: 10px;
-    }
-
-    .projetos::-webkit-scrollbar-track {
-        background-color: var(--color5);
-    }
-
-    .projetos figure img{
-        width: 180px;
-        height: 160px;
-    }
-
-    .projetos .container-proj {
-        width: 92%;
-        height: 190px;
-    }
-
-    .projetos .container-proj:hover{
-        height: 190px;
-    }
-
-    .projetos .container-proj img{
+    .container-proj img{
         filter: sepia(100%) hue-rotate(-20deg) saturate(10%);
-        width: 100%;
     }
+
+    .container-proj:hover img{
+        filter: none;
+    }
+
+    figure img{
+        width: 180px;
+        height: 120px;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 25px 5px;
+    }
+
+    .action-button{
+        display: none;
+    }
+
+    .action-button:hover{
+        display: none;
+    }
+
+    #previous{
+        border-radius: 25px 0px 0px 5px;
+    }
+    #next{
+        border-radius: 0px 5px 25px 0px;
+    }
+
+    /*? botoes de dentro dos projetos */
+    .btn-proj{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    .btn-proj a{
+        width: 70px;
+        font-size: 16px;
+        color: var(--white);
+        text-align: center;
+        padding: 5px;
+        border-radius: 20px;
+        transition: background-color 0.8s;
+
+    }
+
+    .btn-proj a:hover{
+        background-color: var(--color3);
+        transition: 0.5s;
+    }
+
 
 
         /* Minhas techs */
@@ -858,6 +904,11 @@ footer .fa-solid{
 
 
 @media (min-width:768px) and (max-width: 991.98px){ /**Tamanho para alguns celulares e tablets */
+    
+    body{
+        background-color: pink;
+    }
+    
     header{
         width: 100%;
         height: 8vh;
@@ -870,7 +921,7 @@ footer .fa-solid{
 
     .nav-list {
         position: absolute;
-        top: 8vh;
+        top: 70px;
         right: 0;
         width: 50vw;
         height: 92vh;
@@ -941,8 +992,12 @@ footer .fa-solid{
         font-size: 11px;
     }
 
+    #curriculo{
+        font-size: 14px;
+    }
+
     #picture-logo{
-        width: 100%;
+        width: 60%;
     }
     .redes i{
         font-size: 40px;

@@ -21,5 +21,5 @@ Fique à vontade para explorar o código, compartilhar feedback e, claro, colabo
 #### ERROS PARA RESOLVER 
 - [x] layout grid com quebra de página
 - [ ] Imagem lego esta por cima da nav-bar
-- [ ] Quando o next é acionado o hover para de funcionar no grid
+- [X] Quando o next é acionado o hover para de funcionar no grid
 - [X] Barra de rolagem do grid não esta aparecendo 

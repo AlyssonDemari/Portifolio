@@ -67,12 +67,19 @@ function next() {
   }
 }
 
-function prev(itemWidth) {
+function start(itemWidth) {
   if (offset < 0) {
     offset += itemWidth;
     if (offset > 0) {
-      offset = 0;
+      offset = 0; // Garantindo que o offset não seja maior que 0
     }
+    itemsWrapper.style.transform = `translateX(${offset}px)`;
+  }
+}
+
+function prev() {
+  if (offset < 0) { 
+    offset += itemWidth; 
     itemsWrapper.style.transform = `translateX(${offset}px)`;
   }
 }
@@ -138,7 +145,7 @@ categoryButtons.forEach(button => {
   button.addEventListener('click', () => {
     const category = button.getAttribute('data-category');
     filterItems(category);
-    prev(8000)
+    start(8000)
   });
 });
 
@@ -147,7 +154,7 @@ filterItems('all');
 //! ---- FIM ---- função responsável pela filtragem do grid
 
 
-// Progrsso das linguagens 
+// Progrsso 
 const progressoHTML = document.querySelectorAll(".barra div")[0];
 progressoHTML.setAttribute("style", "width: 90%;");
 

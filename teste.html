@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtro de Categorias com Botões</title>
+  <style>
+    /* style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.item {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.item h2 {
+  margin-top: 0;
+}
+
+/* Inicialmente, escondemos os itens */
+.item {
+  display: none;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Filtro de Categorias</h1>
+
+  <!-- Botões de categoria -->
+  <div>
+    <button class="category-btn" data-category="all">Todas</button>
+    <button class="category-btn" data-category="frutas">Frutas</button>
+    <button class="category-btn" data-category="legumes">Legumes</button>
+    <button class="category-btn" data-category="bebidas">Bebidas</button>
+  </div>
+
+  <!-- Divs de conteúdo -->
+  <div class="item frutas">
+    <h2>Maçã</h2>
+    <p>Uma fruta deliciosa.</p>
+  </div>
+
+  <div class="item frutas">
+    <h2>Banana</h2>
+    <p>Rica em potássio.</p>
+  </div>
+
+  <div class="item legumes">
+    <h2>Cenoura</h2>
+    <p>Boa para a visão.</p>
+  </div>
+
+  <div class="item legumes">
+    <h2>Alface</h2>
+    <p>Uma folha verde e nutritiva.</p>
+ 
+
+  <script>
+          // script.js
+
+      // Obtém todos os botões e as divs de itens
+      const categoryButtons = document.querySelectorAll('.category-btn');
+      const items = document.querySelectorAll('.item');
+      const btnProj = document.querySelectorAll('btn-proj') 
+
+      // Função para filtrar as divs com base na categoria
+      function filterItems(category) {
+        // Para cada div de item, verifica se ela corresponde à categoria selecionada
+        items.forEach(item => {
+          if (category === 'all' || item.classList.contains(category)) {
+            item.style.display = 'inline-block'; // Exibe o item
+            btnProj.style.color = 'blue'
+          } else {
+            item.style.display = 'none'; // Esconde o item
+          }
+        });
+      }
+
+      // Adiciona um ouvinte de evento para cada botão de categoria
+      categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const category = button.getAttribute('data-category');
+          filterItems(category);
+        });
+      });
+
+      // Chama a função ao carregar a página para aplicar o filtro inicial (mostrar todos os itens)
+      filterItems('all');
+
+  </script>
+
+
+
+
+aqui 
+//! função responsável pela filtragem do grid
+//? pega as informações do DOM
+const categoryButtons = document.querySelectorAll('.category-btn');
+const items = document.querySelectorAll('.item');
+const containers = document.querySelectorAll('.container-proj');
+const previw = document.querySelectorAll('.container-proj a');
+
+//? Deixa a tag a sempre trasnparente 
+previw.forEach(function(link) {
+  link.style.color = '#00000000';
+});
+
+//? Quando acontece o hover deixa visivel a descrição  
+const hoverEnter = (event) => {
+  const links = event.currentTarget.querySelectorAll('a');
+  links.forEach(link => {
+    link.style.color = 'white';
+    link.style.transform = 'translateY(0px)';
+    link.style.transition = '1.2s'
+  });
+}
+
+//? Quando acaba o hover volta a ser transparente  
+const hoverOut = (event) => {
+  const links = event.currentTarget.querySelectorAll('a');
+  links.forEach(link => {
+    link.style.transform = 'translateY(-20px)';
+    link.style.color = '#00000000';
+  });
+}
+
+//? Adiciona eventos para cada container individualmente
+containers.forEach(container => {
+  container.addEventListener('mouseenter', hoverEnter);
+  container.addEventListener('mouseleave', hoverOut);
+});
+
+
+//? Função para filtrar as divs com base na categoria
+function filterItems(category) {
+  //? Para cada div de item, verifica se ela corresponde à categoria selecionada
+  items.forEach(item => {
+    if (category === 'all' || item.classList.contains(category)) {
+      item.style.display = 'inline';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+//? Adiciona um ouvinte de evento para cada botão de categoria
+categoryButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const category = button.getAttribute('data-category');
+    filterItems(category);
+  });
+});
+
+//? Chama a função ao carregar a página para aplicar o filtro inicial (mostrar todos os itens)
+filterItems('all');
+//! ---- FIM ---- função responsável pela filtragem do grid

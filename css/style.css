@@ -360,18 +360,27 @@ li span{
     margin: 10px 0px;
 }
 
-.btn-leg li{
-    background-color: var(--color3);
-    color: var(--white);
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 20px;
-    transition: background-color 0.8s;
+.btn-leg ul{
+    margin-top: 50px;
+    gap: 30px;
+    font-family: var(--fonte-padrao);
 }
 
-.btn-leg li:hover{
-    background-color: var(--color1);
-    transition: 0.5s;
+ul > button {
+    padding: 10px 20px;
+    border: none;  
+    border-radius: 10px; 
+    background-color: var(--color3); 
+    font-weight: 450;
+    color: var(--white);
+    transition: background-position 0.4s ease; 
+    background-image: linear-gradient(to top, var(--color1) 50%, var(--color3) 50%);
+    background-size: 100% 200%;
+    background-position: top;
+}
+
+ul > button:hover {
+    background-position: bottom;
 }
 
 /*? ITENS DO GRID */
@@ -584,6 +593,10 @@ footer .fa-solid{
     top: 100;
     left: 87%;
 }
+
+
+
+
 
 @media (min-width: 360px) and (max-width: 767.98px){ /**Tamanho para celulares */
     body{

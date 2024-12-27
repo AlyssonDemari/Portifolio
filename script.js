@@ -67,16 +67,87 @@ function next() {
   }
 }
 
-function prev() {
-  if (offset < 0) { 
-    offset += itemWidth; 
+function prev(itemWidth) {
+  if (offset < 0) {
+    offset += itemWidth;
+    if (offset > 0) {
+      offset = 0;
+    }
     itemsWrapper.style.transform = `translateX(${offset}px)`;
   }
 }
 //? -- FIM -- Função responsável pela movimentação do grid
 
 
-// Progrsso 
+//! função responsável pela filtragem do grid
+//? pega as informações do DOM
+const categoryButtons = document.querySelectorAll('.category-btn');
+const items = document.querySelectorAll('.item');
+const containers = document.querySelectorAll('.container-proj');
+const previw = document.querySelectorAll('.container-proj a');
+
+
+
+//? Deixa a tag a sempre trasnparente 
+previw.forEach(function(link) {
+  link.style.color = '#00000000';
+});
+
+//? Quando acontece o hover deixa visivel a descrição  
+const hoverEnter = (event) => {
+  const links = event.currentTarget.querySelectorAll('a');
+  links.forEach(link => {
+    link.style.color = 'white';
+    link.style.transform = 'translateY(0px)';
+    link.style.transition = '1.2s'
+  });
+}
+
+//? Quando acaba o hover volta a ser transparente  
+const hoverOut = (event) => {
+  const links = event.currentTarget.querySelectorAll('a');
+  links.forEach(link => {
+    link.style.transform = 'translateY(-20px)';
+    link.style.color = '#00000000';
+  });
+}
+
+//? Adiciona eventos para cada container individualmente
+containers.forEach(container => {
+  container.addEventListener('mouseenter', hoverEnter);
+  container.addEventListener('mouseleave', hoverOut);
+});
+
+
+//? Função para filtrar as divs com base na categoria
+function filterItems(category) {
+
+  //? Para cada div de item, verifica se ela corresponde à categoria selecionada
+  items.forEach(item => {
+    if (category === 'all' || item.classList.contains(category)) {
+      item.style.display = 'inline';
+    
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+//? Adiciona um ouvinte de evento para cada botão de categoria
+categoryButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const category = button.getAttribute('data-category');
+    filterItems(category);
+    prev(8000)
+  });
+});
+
+//? Chama a função ao carregar a página para aplicar o filtro inicial (mostrar todos os itens)
+filterItems('all');
+//! ---- FIM ---- função responsável pela filtragem do grid
+
+
+// Progrsso das linguagens 
 const progressoHTML = document.querySelectorAll(".barra div")[0];
 progressoHTML.setAttribute("style", "width: 90%;");
 

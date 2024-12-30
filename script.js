@@ -72,7 +72,7 @@ const projetosGrid = [
 
   { 'nome': 'projeto8', 'img': 'imagens/projeto8.png', 'linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Amigo-Secreto/', 'urlCod' : 'https://github.com/AlyssonDemari/Amigo-Secreto'   },
 
-  { 'nome': 'projeto9', 'img': 'imagens/projet9.png','linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Projeto-Dark-mode/', 'urlCod' : 'https://github.com/AlyssonDemari/Projeto-Dark-mode?tab=readme-ov-file'  },
+  { 'nome': 'projeto9', 'img': 'imagens/projeto9.png','linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Projeto-Dark-mode/', 'urlCod' : 'https://github.com/AlyssonDemari/Projeto-Dark-mode?tab=readme-ov-file'  },
 
   { 'nome': 'projeto10', 'img': 'imagens/embreve.png', 'linguagem': '...', 'urlView' : '#', 'urlCod' : '#'    },
   

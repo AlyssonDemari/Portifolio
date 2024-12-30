@@ -399,14 +399,14 @@ ul > button:hover {
     grid-template-columns: repeat(7, 1fr); /* caso quebre o grid aumentar o primeiro número*/
     grid-template-rows: repeat(2, 175px);
     transition: all 1s;
-    gap: 45px;
+    gap: 20px 45px;
 }
 
 .container-item{
     position: absolute;
     padding: 30px;
     width: 690px;
-    height: 380px;
+    height: 360px;
     background-color: var(--color4);
     border-radius: 25px 5px;
     overflow: hidden;
@@ -453,7 +453,7 @@ figure img{
     justify-content: center;
     align-items: center;
     width: 50px;
-    height: 99.5%;
+    height: 95%;
     border-radius: 10px;
     color: #00000000;
     z-index: 1;

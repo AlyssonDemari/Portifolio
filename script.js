@@ -51,8 +51,7 @@ const mobileNavbar = new MobileNavbar(
 mobileNavbar.init();
 
 
-
-
+//! Responsável por criar os projetos e colocar no grid 
 const projetosGrid = [
   { 'nome': 'projeto0', 'img': 'imagens/projeto0.png', 'linguagem': 'html', 'urlView' : 'https://alyssondemari.github.io/FrontEnd-Mentor/huddle-landing-page-with-alternating-feature-blocks-master/index.html', 'urlCod' : 'https://github.com/AlyssonDemari/FrontEnd-Mentor/tree/main/huddle-landing-page-with-alternating-feature-blocks-master' },
 
@@ -78,15 +77,12 @@ const projetosGrid = [
   
   { 'nome': 'projeto11', 'img': 'imagens/projeto11.png', 'linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Jogo-da-memoria/', 'urlCod' : 'https://github.com/AlyssonDemari/Jogo-da-memoria?tab=readme-ov-file'    },
 
-  { 'nome': 'projeto12', 'img': 'imagens/embreve.png', 'linguagem': '...', 'urlView' : '#', 'urlCod' : '#'    },
+  { 'nome': 'projeto12', 'img': 'imagens/embreve.png', 'linguagem': 'python', 'urlView' : '', 'urlCod' : ''    },
 
   { 'nome': 'projeto13', 'img': 'imagens/embreve.png', 'linguagem': '...', 'urlView' : '#', 'urlCod' : '#'    },
 ];
 
-
 const containerPaiProj = document.querySelector('.items-wrapper')
-
-
 const createProj = (projetosGrid, container) => {
     projetosGrid.forEach(proj => {
       container.innerHTML += `
@@ -103,15 +99,7 @@ const createProj = (projetosGrid, container) => {
 
 }
 createProj(projetosGrid, containerPaiProj)
-
-
-
-
-
-
-
-
-
+//! ---- FIM ---- Responsável por criar os projetos e colocar no grid 
 
 
 //? Função responsável pela movimentação do grid
@@ -145,9 +133,9 @@ function prev() {
     offset += itemWidth; 
     itemsWrapper.style.transform = `translateX(${offset}px)`;
   }
+
 }
 //? -- FIM -- Função responsável pela movimentação do grid
-
 
 //! função responsável pela filtragem do grid
 //? pega as informações do DOM
@@ -203,11 +191,28 @@ function filterItems(category) {
   });
 }
 
+//? Função responsável por mudar o número de colunas no grid conforme o número de projetos 
+function updateGridLayout(category) {
+  const gridProjetos = document.querySelector('.items-wrapper');
+
+  // Verifique a categoria e altere o número de colunas
+  if (category === 'all') {
+    gridProjetos.style.gridTemplateColumns = 'repeat(8, 1fr)'; 
+  } else if (category === 'html') {
+    gridProjetos.style.gridTemplateColumns = 'repeat(3, 1fr)'; 
+  } else if (category === 'js') {
+    gridProjetos.style.gridTemplateColumns = 'repeat(4, 1fr)'; 
+  } else {
+    gridProjetos.style.gridTemplateColumns = 'repeat(3, 1fr)'; 
+  }
+}
+
 //? Adiciona um ouvinte de evento para cada botão de categoria
 categoryButtons.forEach(button => {
   button.addEventListener('click', () => {
     const category = button.getAttribute('data-category');
     filterItems(category);
+    updateGridLayout(category)
     start(8000)
   });
 });

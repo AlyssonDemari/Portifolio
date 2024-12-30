@@ -74,9 +74,9 @@ const projetosGrid = [
 
   { 'nome': 'projeto9', 'img': 'imagens/projeto9.png','linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Projeto-Dark-mode/', 'urlCod' : 'https://github.com/AlyssonDemari/Projeto-Dark-mode?tab=readme-ov-file'  },
 
-  { 'nome': 'projeto10', 'img': 'imagens/embreve.png', 'linguagem': '...', 'urlView' : '#', 'urlCod' : '#'    },
+  { 'nome': 'projeto10', 'img': 'imagens/projeto10.png', 'linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Mini-projetos-em-JS/', 'urlCod' : 'https://github.com/AlyssonDemari/Mini-projetos-em-JS?tab=readme-ov-file'    },
   
-  { 'nome': 'projeto11', 'img': 'imagens/embreve.png', 'linguagem': '...', 'urlView' : '#', 'urlCod' : '#'    },
+  { 'nome': 'projeto11', 'img': 'imagens/projeto11.png', 'linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Jogo-da-memoria/', 'urlCod' : 'https://github.com/AlyssonDemari/Jogo-da-memoria?tab=readme-ov-file'    },
 
   { 'nome': 'projeto12', 'img': 'imagens/embreve.png', 'linguagem': '...', 'urlView' : '#', 'urlCod' : '#'    },
 

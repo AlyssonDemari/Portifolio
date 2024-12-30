@@ -51,6 +51,69 @@ const mobileNavbar = new MobileNavbar(
 mobileNavbar.init();
 
 
+
+
+const projetosGrid = [
+  { 'nome': 'projeto0', 'img': 'imagens/projeto0.png', 'linguagem': 'html', 'urlView' : 'https://alyssondemari.github.io/FrontEnd-Mentor/huddle-landing-page-with-alternating-feature-blocks-master/index.html', 'urlCod' : 'https://github.com/AlyssonDemari/FrontEnd-Mentor/tree/main/huddle-landing-page-with-alternating-feature-blocks-master' },
+
+  { 'nome': 'projeto1', 'img': 'imagens/projeto1.png', 'linguagem': 'html', 'urlView' : 'https://alyssondemari.github.io/FrontEnd-Mentor/clipboard-landing-page-master/', 'urlCod' : 'https://github.com/AlyssonDemari/FrontEnd-Mentor/tree/main/clipboard-landing-page-master'  },
+
+  { 'nome': 'projeto2', 'img': 'imagens/projeto2.png', 'linguagem': 'html', 'urlView' : 'https://alyssondemari.github.io/FrontEnd-Mentor/recipe-page-main/index.html', 'urlCod' : 'https://github.com/AlyssonDemari/FrontEnd-Mentor/tree/main/recipe-page-main'  },
+
+  { 'nome': 'projeto3', 'img': 'imagens/projeto3.png', 'linguagem': 'html', 'urlView' : 'https://alyssondemari.github.io/FrontEnd-Mentor/four-card-feature-section-master/index.html', 'urlCod' : 'https://github.com/AlyssonDemari/FrontEnd-Mentor/tree/main/four-card-feature-section-master'  },
+  
+  { 'nome': 'projeto4', 'img': 'imagens/projeto4.png', 'linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Curso-Alura/aulas/codigo%202/index.html', 'urlCod' : 'https://github.com/AlyssonDemari/Curso-Alura/tree/main/aulas/codigo%202'  },
+  
+  { 'nome': 'projeto5', 'img': 'imagens/projeto5.png', 'linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Sorteador-de-numero/', 'urlCod' : 'https://github.com/AlyssonDemari/Sorteador-de-numero?tab=readme-ov-file'   },
+  
+  { 'nome': 'projeto6', 'img': 'imagens/projeto6.png', 'linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Ingresso/', 'urlCod' : 'https://github.com/AlyssonDemari/Ingresso?tab=readme-ov-file'    },
+
+  { 'nome': 'projeto7', 'img': 'imagens/projeto7.png', 'linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Carrinho-de-Compras/', 'urlCod' : 'https://github.com/AlyssonDemari/Carrinho-de-Compras'    },
+
+  { 'nome': 'projeto8', 'img': 'imagens/projeto8.png', 'linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Amigo-Secreto/', 'urlCod' : 'https://github.com/AlyssonDemari/Amigo-Secreto'   },
+
+  { 'nome': 'projeto9', 'img': 'imagens/projetO9.png','linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Projeto-Dark-mode/', 'urlCod' : 'https://github.com/AlyssonDemari/Projeto-Dark-mode?tab=readme-ov-file'  },
+
+  { 'nome': 'projeto10', 'img': 'imagens/embreve.png', 'linguagem': '...', 'urlView' : '#', 'urlCod' : '#'    },
+  
+  { 'nome': 'projeto11', 'img': 'imagens/embreve.png', 'linguagem': '...', 'urlView' : '#', 'urlCod' : '#'    },
+
+  { 'nome': 'projeto12', 'img': 'imagens/embreve.png', 'linguagem': '...', 'urlView' : '#', 'urlCod' : '#'    },
+
+  { 'nome': 'projeto13', 'img': 'imagens/embreve.png', 'linguagem': '...', 'urlView' : '#', 'urlCod' : '#'    },
+];
+
+
+const containerPaiProj = document.querySelector('.items-wrapper')
+
+
+const createProj = (projetosGrid, container) => {
+    projetosGrid.forEach(proj => {
+      container.innerHTML += `
+        <div class="container-proj item ${proj.linguagem}">
+          <figure>
+              <a target="_blank" href="${proj.urlView}"><img src="${proj.img}" alt="${proj.nome}"></a>
+          </figure>
+          <div class="btn-proj">
+            <a target="_blank" href="${proj.urlView}">Previw</a>
+            <a target="_blank" href="${proj.urlCod}">Código</a>
+          </div>
+        </div>
+    `})
+
+}
+createProj(projetosGrid, containerPaiProj)
+
+
+
+
+
+
+
+
+
+
+
 //? Função responsável pela movimentação do grid
 const containerItem = document.getElementById('container-item');
 const itemsWrapper = containerItem.querySelector('.items-wrapper');
@@ -174,8 +237,3 @@ const progressoMSQL = document.querySelectorAll(".barra div")[5];
 progressoMSQL.setAttribute("style", "width: 90%;"); 
 
 
-
-
-function erro(){
-    alert('Desculpe pelo transtorno, mas o filtro de projetos ainda não está funcionando')
-}

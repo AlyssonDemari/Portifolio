@@ -6,7 +6,7 @@
 <ul>
     <li>HTML5 & CSS3: Construindo layouts semânticos e responsivos.</li>
     <li>JavaScript & TypeScript: Criação de aplicações interativas e dinâmicas</li>
-    <li>React & Vue.js: Desenvolvimento de interfaces modernas com alta performance</li>
+   <!-- <li>React & Vue.js: Desenvolvimento de interfaces modernas com alta performance</li> -->
     <li>Git & GitHub: Versionamento de código e colaboração em projetos</li>
 </ul>
 <!--  Projetos em Destaque:

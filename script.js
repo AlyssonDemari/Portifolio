@@ -77,7 +77,7 @@ const projetosGrid = [
   
   { 'nome': 'projeto11', 'img': 'imagens/projeto11.png', 'linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Jogo-da-memoria/', 'urlCod' : 'https://github.com/AlyssonDemari/Jogo-da-memoria?tab=readme-ov-file'    },
 
-  { 'nome': 'projeto12', 'img': 'imagens/embreve.png', 'linguagem': 'python', 'urlView' : '', 'urlCod' : ''    },
+  { 'nome': 'projeto12', 'img': 'imagens/projeto12.png', 'linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/ticket/', 'urlCod' : 'https://github.com/AlyssonDemari/ticket?tab=readme-ov-file'    },
 
   { 'nome': 'projeto13', 'img': 'imagens/embreve.png', 'linguagem': '...', 'urlView' : '#', 'urlCod' : '#'    },
 ];
@@ -201,7 +201,7 @@ function updateGridLayout(category) {
   } else if (category === 'html') {
     gridProjetos.style.gridTemplateColumns = 'repeat(3, 1fr)'; 
   } else if (category === 'js') {
-    gridProjetos.style.gridTemplateColumns = 'repeat(4, 1fr)'; 
+    gridProjetos.style.gridTemplateColumns = 'repeat(5, 1fr)'; 
   } else {
     gridProjetos.style.gridTemplateColumns = 'repeat(3, 1fr)'; 
   }

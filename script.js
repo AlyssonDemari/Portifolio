@@ -79,7 +79,7 @@ const projetosGrid = [
 
   { 'nome': 'projeto12', 'img': 'imagens/projeto12.png', 'linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/ticket/', 'urlCod' : 'https://github.com/AlyssonDemari/ticket?tab=readme-ov-file'    },
 
-  { 'nome': 'projeto13', 'img': 'imagens/embreve.png', 'linguagem': '...', 'urlView' : '#', 'urlCod' : '#'    },
+  { 'nome': 'projeto13', 'img': 'imagens/embreve.png', 'linguagem': 'python', 'urlView' : '#', 'urlCod' : '#'    },
 ];
 
 const containerPaiProj = document.querySelector('.items-wrapper')

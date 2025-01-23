@@ -96,7 +96,6 @@ const createProj = (projetosGrid, container) => {
           </div>
         </div>
     `})
-
 }
 createProj(projetosGrid, containerPaiProj)
 //! ---- FIM ---- Responsável por criar os projetos e colocar no grid 
@@ -194,18 +193,24 @@ function filterItems(category) {
 //? Função responsável por mudar o número de colunas no grid conforme o número de projetos 
 function updateGridLayout(category) {
   const gridProjetos = document.querySelector('.items-wrapper');
+  const screenWidth = window.innerWidth;
 
-  // Verifique a categoria e altere o número de colunas
-  if (category === 'all') {
-    gridProjetos.style.gridTemplateColumns = 'repeat(8, 1fr)'; 
-  } else if (category === 'html') {
-    gridProjetos.style.gridTemplateColumns = 'repeat(3, 1fr)'; 
-  } else if (category === 'js') {
-    gridProjetos.style.gridTemplateColumns = 'repeat(5, 1fr)'; 
+  if (screenWidth > 771) {
+    // Verifique a categoria e altere o número de colunas
+    if (category === 'all') {
+      gridProjetos.style.gridTemplateColumns = 'repeat(8, 1fr)'; 
+    } else if (category === 'html') {
+      gridProjetos.style.gridTemplateColumns = 'repeat(3, 1fr)'; 
+    } else if (category === 'js') {
+      gridProjetos.style.gridTemplateColumns = 'repeat(5, 1fr)'; 
+    } else {
+      gridProjetos.style.gridTemplateColumns = 'repeat(3, 1fr)'; 
+    }
   } else {
-    gridProjetos.style.gridTemplateColumns = 'repeat(3, 1fr)'; 
+    gridProjetos.style.gridTemplateColumns = '1fr'; 
   }
 }
+
 
 //? Adiciona um ouvinte de evento para cada botão de categoria
 categoryButtons.forEach(button => {

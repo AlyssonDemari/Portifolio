@@ -53,13 +53,13 @@ mobileNavbar.init();
 
 //! Responsável por criar os projetos e colocar no grid 
 const projetosGrid = [
-  { 'nome': 'projeto0', 'img': 'imagens/projeto0.png', 'linguagem': 'html', 'urlView' : 'https://alyssondemari.github.io/FrontEnd-Mentor/huddle-landing-page-with-alternating-feature-blocks-master/index.html', 'urlCod' : 'https://github.com/AlyssonDemari/FrontEnd-Mentor/tree/main/huddle-landing-page-with-alternating-feature-blocks-master' },
+  { 'nome': 'projeto0', 'img': 'imagens/projeto0.png', 'linguagem': 'sass', 'urlView' : 'https://alyssondemari.github.io/FrontEnd-Mentor/huddle-landing-page-with-alternating-feature-blocks-master/index.html', 'urlCod' : 'https://github.com/AlyssonDemari/FrontEnd-Mentor/tree/main/huddle-landing-page-with-alternating-feature-blocks-master' },
 
-  { 'nome': 'projeto1', 'img': 'imagens/projeto1.png', 'linguagem': 'html', 'urlView' : 'https://alyssondemari.github.io/FrontEnd-Mentor/clipboard-landing-page-master/', 'urlCod' : 'https://github.com/AlyssonDemari/FrontEnd-Mentor/tree/main/clipboard-landing-page-master'  },
+  { 'nome': 'projeto1', 'img': 'imagens/projeto1.png', 'linguagem': 'sass', 'urlView' : 'https://alyssondemari.github.io/FrontEnd-Mentor/clipboard-landing-page-master/', 'urlCod' : 'https://github.com/AlyssonDemari/FrontEnd-Mentor/tree/main/clipboard-landing-page-master'  },
 
-  { 'nome': 'projeto2', 'img': 'imagens/projeto2.png', 'linguagem': 'html', 'urlView' : 'https://alyssondemari.github.io/FrontEnd-Mentor/recipe-page-main/index.html', 'urlCod' : 'https://github.com/AlyssonDemari/FrontEnd-Mentor/tree/main/recipe-page-main'  },
+  { 'nome': 'projeto2', 'img': 'imagens/projeto2.png', 'linguagem': 'sass', 'urlView' : 'https://alyssondemari.github.io/FrontEnd-Mentor/recipe-page-main/index.html', 'urlCod' : 'https://github.com/AlyssonDemari/FrontEnd-Mentor/tree/main/recipe-page-main'  },
 
-  { 'nome': 'projeto3', 'img': 'imagens/projeto3.png', 'linguagem': 'html', 'urlView' : 'https://alyssondemari.github.io/FrontEnd-Mentor/four-card-feature-section-master/index.html', 'urlCod' : 'https://github.com/AlyssonDemari/FrontEnd-Mentor/tree/main/four-card-feature-section-master'  },
+  { 'nome': 'projeto3', 'img': 'imagens/projeto3.png', 'linguagem': 'sass', 'urlView' : 'https://alyssondemari.github.io/FrontEnd-Mentor/four-card-feature-section-master/index.html', 'urlCod' : 'https://github.com/AlyssonDemari/FrontEnd-Mentor/tree/main/four-card-feature-section-master'  },
   
   { 'nome': 'projeto4', 'img': 'imagens/projeto4.png', 'linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/Curso-Alura/aulas/codigo%202/index.html', 'urlCod' : 'https://github.com/AlyssonDemari/Curso-Alura/tree/main/aulas/codigo%202'  },
   
@@ -79,7 +79,7 @@ const projetosGrid = [
 
   { 'nome': 'projeto12', 'img': 'imagens/projeto12.png', 'linguagem': 'js', 'urlView' : 'https://alyssondemari.github.io/ticket/', 'urlCod' : 'https://github.com/AlyssonDemari/ticket?tab=readme-ov-file'    },
 
-  { 'nome': 'projeto13', 'img': 'imagens/projeto13.png', 'linguagem': 'html', 'urlView' : 'https://alyssondemari.github.io/Chalenge100Days/', 'urlCod' : 'https://github.com/AlyssonDemari/Chalenge100Days'    },
+  { 'nome': 'projeto13', 'img': 'imagens/projeto13.png', 'linguagem': 'sass', 'urlView' : 'https://alyssondemari.github.io/Chalenge100Days/', 'urlCod' : 'https://github.com/AlyssonDemari/Chalenge100Days'    },
 
   { 'nome': 'projeto14', 'img': 'imagens/embreve.png', 'linguagem': 'python', 'urlView' : '#', 'urlCod' : '#'    },
 ];
@@ -201,7 +201,7 @@ function updateGridLayout(category) {
     // Verifique a categoria e altere o número de colunas
     if (category === 'all') {
       gridProjetos.style.gridTemplateColumns = 'repeat(8, 1fr)'; 
-    } else if (category === 'html') {
+    } else if (category === 'sass') {
       gridProjetos.style.gridTemplateColumns = 'repeat(3, 1fr)'; 
     } else if (category === 'js') {
       gridProjetos.style.gridTemplateColumns = 'repeat(5, 1fr)'; 
